@@ -371,7 +371,7 @@
                           "id":  "emp1",
                           "nombre":  "Docena de Empanadas Árabe",
                           "descripcion":  "Docena de empanadas árabes",
-                          "precio":  20000,
+                         "precio":  20000,
                           "emoji":  "🥟",
                           "imagen":  "../files/empanada_arabe.png"
                       },
@@ -379,7 +379,7 @@
                           "id":  "emp2",
                           "nombre":  "Docena de Empanadas Criolla Salada",
                           "descripcion":  "Docena de empanadas criollas saladas",
-                          "precio":  20000,
+                         "precio":  20000,
                           "emoji":  "🥟",
                           "imagen":  "../files/empanada_criolla_salada.png"
                       },
@@ -387,7 +387,7 @@
                           "id":  "emp3",
                           "nombre":  "Docena de Empanadas Jamón y Queso",
                           "descripcion":  "Docena de empanadas de jamón y queso",
-                          "precio":  20000,
+                         "precio":  20000,
                           "emoji":  "🥟",
                           "imagen":  "../files/empanada_jamon_queso.png"
                       },
@@ -414,6 +414,34 @@
                           "precio":  2000,
                           "emoji":  "🥟",
                           "imagen":  "../files/empanada_jamon_queso.png"
+                      },
+                      {
+                          "id":  "emp7",
+                          "nombre":  "Docena de Empanadas de Pollo",
+                          "descripcion":  "Docena de empanadas de pollo",
+                          "precio":  20000,
+                          "emoji":  "🥟"
+                      },
+                      {
+                          "id":  "emp8",
+                          "nombre":  "Empanada de Pollo (Unidad)",
+                          "descripcion":  "Empanada de pollo",
+                          "precio":  2000,
+                          "emoji":  "🥟"
+                      },
+                      {
+                          "id":  "emp9",
+                          "nombre":  "Docena de Empanadas de Bondiola de Cerdo",
+                          "descripcion":  "Docena de empanadas de bondiola de cerdo",
+                          "precio":  20000,
+                          "emoji":  "🥟"
+                      },
+                      {
+                          "id":  "emp10",
+                          "nombre":  "Empanada de Bondiola de Cerdo (Unidad)",
+                          "descripcion":  "Empanada de bondiola de cerdo",
+                          "precio":  2000,
+                          "emoji":  "🥟"
                       }
                   ],
     "vegetarianos":  [
@@ -748,46 +776,12 @@
               ],
     "promos":  [
                    {
-                       "id":  "promo1",
-                       "nombre":  "Combo Hamburguesa + Papas",
-                       "descripcion":  "Hamburguesa + Papas Fritas + Bebida",
-                       "precio":  9.99,
-                       "emoji":  "🍔"
-                   },
-                   {
-                       "id":  "promo2",
-                       "nombre":  "Combo Lomo Premium",
-                       "descripcion":  "Lomo + Papas + Bebida + Postre",
-                       "precio":  12.99,
-                       "emoji":  "🥩"
-                   },
-                   {
-                       "id":  "promo3",
-                       "nombre":  "Combo Amigos",
-                       "descripcion":  "2 Hamburguesas + 2 Papas + 2 Bebidas",
-                       "precio":  17.99,
-                       "emoji":  "👨‍👩‍👧"
-                   },
-                   {
-                       "id":  "promo4",
-                       "nombre":  "Combo Familia",
-                       "descripcion":  "4 Hamburguesas + 3 Papas + Bebidas",
-                       "precio":  24.99,
-                       "emoji":  "👨‍👩‍👧‍👦"
-                   },
-                   {
-                       "id":  "promo5",
-                       "nombre":  "Combo Wrap + Papas",
-                       "descripcion":  "Wrap + Papas Fritas + Bebida",
-                       "precio":  10.99,
-                       "emoji":  "🌯"
-                   },
-                   {
-                       "id":  "promo6",
-                       "nombre":  "Combo Vegetariano",
-                       "descripcion":  "Hamburguesa Vegetariana + Papas + Bebida",
-                       "precio":  8.99,
-                       "emoji":  "🥬"
+                       "id":  "promo-3x2-completa-simple",
+                       "nombre":  "Promo 3x2 - Hamburguesa Completa Simple",
+                       "descripcion":  "Llevate 3 Hamburguesas Completas Simples al precio de 2. PAN DE PAPA, MAYONESA CASERA, MEDALLON DE CARNE DE 120GS, LECHUGA, TOMATE, HUEVO, QUESO DAMBO, JAMON, CEBOLLA MORADA, PEPINILLO Y PAPAS FRITAS",
+                       "precio":  26000,
+                       "emoji":  "🎉",
+                       "imagen":  "../files/promo_3x2_completa_simple.jpeg"
                    }
                ]
 }

@@ -71,6 +71,37 @@ function cargarSweetAlert() {
     return sweetAlertPromise;
 }
 
+function obtenerLogoFallbackDataUri() {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img" aria-label="Logo Bros"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f32b15"/><stop offset="100%" stop-color="#c0392b"/></linearGradient></defs><rect width="200" height="200" rx="18" fill="url(#g)"/><text x="50%" y="56%" font-family="Segoe UI, Arial, sans-serif" font-size="56" text-anchor="middle" fill="#ffffff" font-weight="700">B</text></svg>`;
+    return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+}
+
+function configurarLogoFallback() {
+    const fallbackLogo = obtenerLogoFallbackDataUri();
+
+    document.querySelectorAll('.logo-img').forEach((img) => {
+        const aplicarFallback = () => {
+            if (img.dataset.fallbackApplied === 'true') return;
+            img.dataset.fallbackApplied = 'true';
+            img.src = fallbackLogo;
+        };
+
+        img.addEventListener('error', aplicarFallback);
+
+        if (img.complete && img.naturalWidth === 0) {
+            aplicarFallback();
+        }
+    });
+
+    const icono = document.querySelector('link[rel~="icon"]');
+    if (icono) {
+        icono.addEventListener('error', () => {
+            icono.href = fallbackLogo;
+            icono.type = 'image/svg+xml';
+        });
+    }
+}
+
 class Carrito {
     constructor() {
         this.items = this.cargarDelStorage();
@@ -148,6 +179,7 @@ class Carrito {
 const carrito = new Carrito();
 
 document.addEventListener('DOMContentLoaded', () => {
+    configurarLogoFallback();
     carrito.actualizarContador();
 });
 
@@ -536,7 +568,7 @@ function renderizarPromos() {
     
     grid.innerHTML = promos.map(promo => `
         <div class="producto-card">
-            <div class="producto-imagen">${promo.emoji}</div>
+            <div class="producto-imagen">${promo.imagen ? `<img src="${promo.imagen}" alt="${promo.nombre}" style="width:100%;height:100%;object-fit:cover;">` : promo.emoji}</div>
             <div class="producto-info">
                 <h3>${promo.nombre}</h3>
                 <p class="producto-descripcion">${promo.descripcion}</p>
