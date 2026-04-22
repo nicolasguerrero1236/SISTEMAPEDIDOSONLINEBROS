@@ -178,9 +178,71 @@ class Carrito {
 
 const carrito = new Carrito();
 
+function estaAbierto() {
+    const ahora = new Date();
+    // getDay(): 0=dom, 1=lun, 2=mar, 3=mie, 4=jue, 5=vie, 6=sab
+    const dia = ahora.getDay();
+    const hora = ahora.getHours();
+    const min = ahora.getMinutes();
+    const minutos = hora * 60 + min;
+
+    const mediodiaAbre  = 12 * 60;       // 12:00
+    const mediodiaTeile = 15 * 60;       // 15:00
+    const nocheAbre     = 20 * 60;       // 20:00
+    const nocheTeile12  = 24 * 60;       // 00:00 (medianoche)
+    const nocheTeile1   = 25 * 60;       // 01:00
+
+    const turnoMediodia = minutos >= mediodiaAbre && minutos < mediodiaTeile;
+    const turnoNoche12  = minutos >= nocheAbre && minutos < nocheTeile12;
+    const turnoNoche1   = minutos >= nocheAbre && minutos < nocheTeile1;
+
+    if (dia === 2 || dia === 3 || dia === 4) {
+        // Martes a jueves: 12-15 y 20-00
+        return turnoMediodia || turnoNoche12;
+    }
+    if (dia === 5 || dia === 6) {
+        // Viernes y sábado: 12-15 y 20-01
+        return turnoMediodia || turnoNoche1;
+    }
+    if (dia === 0) {
+        // Domingo: 20-00
+        return turnoNoche12;
+    }
+    // Lunes: cerrado
+    return false;
+}
+
+function mostrarCartelCerrado() {
+    if (document.getElementById('overlay-cerrado')) return;
+
+    const overlay = document.createElement('div');
+    overlay.id = 'overlay-cerrado';
+    overlay.innerHTML = `
+        <div class="cerrado-box">
+            <div class="cerrado-icono">🍔</div>
+            <h2>¡Ahora estamos cerrados!</h2>
+            <p>Podés ver el menú y preparar tu pedido, pero enviarlo solo durante nuestro horario de atención.</p>
+            <div class="cerrado-horarios">
+                <h3>📅 Horarios de atención</h3>
+                <table>
+                    <tr><td><strong>Martes a Jueves</strong></td><td>12:00 – 15:00 hs</td></tr>
+                    <tr><td></td>                               <td>20:00 – 00:00 hs</td></tr>
+                    <tr><td><strong>Viernes y Sábado</strong></td><td>12:00 – 15:00 hs</td></tr>
+                    <tr><td></td>                               <td>20:00 – 01:00 hs</td></tr>
+                    <tr><td><strong>Domingo</strong></td>       <td>20:00 – 00:00 hs</td></tr>
+                    <tr><td><strong>Lunes</strong></td>         <td>Cerrado</td></tr>
+                </table>
+            </div>
+            <button onclick="document.getElementById('overlay-cerrado').remove()">Ver el Menú igual</button>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     configurarLogoFallback();
     carrito.actualizarContador();
+    if (!estaAbierto()) mostrarCartelCerrado();
 });
 
 function agregarAlCarrito(producto) {
@@ -762,6 +824,11 @@ function configurarAutoguardadoFormulario() {
 
 function enviarPedido(event) {
     event.preventDefault();
+
+    if (!estaAbierto()) {
+        mostrarCartelCerrado();
+        return;
+    }
 
     const cliente = {
         nombre: document.getElementById('nombre').value,
