@@ -1,7 +1,7 @@
 const CONFIG = {
     WHATSAPP_NUMBER: '543518697090',
     NEGOCIO: 'Bros Burger y Lomos',
-    COSTO_DELIVERY: 500
+    COSTO_DELIVERY: 1000
 };
 
 const STORAGE_CLIENTE_KEY = 'datos_cliente';
@@ -48,7 +48,7 @@ async function cargarProductos() {
 
 function obtenerCostoDelivery() {
     const costo = Number(CONFIG.COSTO_DELIVERY);
-    return Number.isFinite(costo) ? costo : 500;
+    return Number.isFinite(costo) ? costo : 1000;
 }
 
 function cargarSweetAlert() {
