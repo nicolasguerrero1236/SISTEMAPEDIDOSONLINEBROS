@@ -231,7 +231,8 @@
                            "nombre":  "Sandwich de Milanesa",
                            "descripcion":  "PAN DE LOMO, MILANESA DE CARNE, MAYONESA CASERA, LECHUGA, TOMATE, JAMON, QUESO DAMBO, HUEVO Y PAPAS FRITAS",
                            "precio":  13000,
-                           "emoji":  "🥖"
+                           "emoji":  "🥖",
+                           "imagen":  "../files/sandwich_milanesa.jpeg"
                        },
                        {
                            "id":  "sand3",

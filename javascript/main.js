@@ -380,7 +380,7 @@ function renderizarSandwiches() {
     
     grid.innerHTML = sandwiches.map(item => {
         const imagen = item.imagen
-            ? `<img src="${item.imagen}" alt="${item.nombre}" style="width: 100%; height: 100%; object-fit: cover;">`
+            ? `<img src="${item.imagen}" alt="${item.nombre}" style="width: 100%; height: 100%; object-fit: ${item.id === 'sand2' ? 'contain' : 'cover'}; ${item.id === 'sand2' ? 'background: #fff; padding: 10px;' : ''}">`
             : item.emoji;
 
         return `
