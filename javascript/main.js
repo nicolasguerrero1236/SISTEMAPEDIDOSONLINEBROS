@@ -627,8 +627,10 @@ function renderizarWraps() {
 function renderizarPromos() {
     const grid = document.getElementById('grid-promos');
     if (!grid) return;
+
+    const promosVisibles = promos.filter(promo => promo.visible !== false);
     
-    grid.innerHTML = promos.map(promo => `
+    grid.innerHTML = promosVisibles.map(promo => `
         <div class="producto-card">
             <div class="producto-imagen">${promo.imagen ? `<img src="${promo.imagen}" alt="${promo.nombre}" style="width:100%;height:100%;object-fit:cover;">` : promo.emoji}</div>
             <div class="producto-info">

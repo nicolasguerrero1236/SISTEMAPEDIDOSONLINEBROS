@@ -776,12 +776,49 @@
               ],
     "promos":  [
                    {
+                       "id":  "promo-lomos-completos-papas-gaseosa",
+                       "nombre":  "2 Lomos Completos con Papas + 2 Gaseosas 500ml",
+                       "descripcion":  "Promo del dia: 2 lomos completos con papas y 2 gaseosas de 500ml.",
+                       "precio":  37000,
+                       "emoji":  "🎉",
+                       "imagen":  "../files/2_lomos_mas_2_gaseosas.jpeg",
+                       "visible":  true
+                   },
+                   {
+                       "id":  "promo-hamburlomos-papas",
+                       "nombre":  "2 Hamburlomos con papas",
+                       "descripcion":  "Promo del dia: 2 hamburlomos con papas.",
+                       "precio":  22000,
+                       "emoji":  "🎉",
+                       "imagen":  "../files/2_hamburlomos.jpeg",
+                       "visible":  true
+                   },
+                   {
+                       "id":  "promo-burger-americana-doble-papas",
+                       "nombre":  "2 Burger Americanas Dobles con Papas",
+                       "descripcion":  "Promo del dia: 2 burger americanas dobles con papas.",
+                       "precio":  25000,
+                       "emoji":  "🎉",
+                       "imagen":  "../files/2_burger_americanas_dobles.jpeg",
+                       "visible":  true
+                   },
+                   {
+                       "id":  "promo-2-lomos-completos-papas",
+                       "nombre":  "2 Lomos Completos con Papas",
+                       "descripcion":  "Promo del dia: 2 lomos completos con papas.",
+                       "precio":  32000,
+                       "emoji":  "🎉",
+                       "imagen":  "../files/2_lomos_completos.jpeg",
+                       "visible":  true
+                   },
+                   {
                        "id":  "promo-3x2-completa-simple",
                        "nombre":  "Promo 3x2 - Hamburguesa Completa Simple",
                        "descripcion":  "Llevate 3 Hamburguesas Completas Simples al precio de 2. PAN DE PAPA, MAYONESA CASERA, MEDALLON DE CARNE DE 120GS, LECHUGA, TOMATE, HUEVO, QUESO DAMBO, JAMON, CEBOLLA MORADA, PEPINILLO Y PAPAS FRITAS",
                        "precio":  26000,
                        "emoji":  "🎉",
-                       "imagen":  "../files/promo_3x2_completa_simple.jpeg"
+                       "imagen":  "../files/promo_3x2_completa_simple.jpeg",
+                       "visible":  false
                    }
                ]
 }
