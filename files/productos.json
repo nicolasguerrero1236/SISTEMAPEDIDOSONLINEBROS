@@ -346,7 +346,7 @@
                       "id":  "papa1",
                       "nombre":  "Papas Clásicas",
                       "descripcion":  "Papas fritas crujientes con sal",
-                      "precio":  9000,
+                      "precio":  10000,
                       "emoji":  "🍟",
                       "imagen":  "../files/papas_clasicas.png"
                   },
@@ -354,7 +354,7 @@
                       "id":  "papa2",
                       "nombre":  "Papas con Huevo",
                       "descripcion":  "Papas fritas con huevo revuelto",
-                      "precio":  11000,
+                      "precio":  12500,
                       "emoji":  "🍟",
                       "imagen":  "../files/papas_con_huevo.png"
                   },
@@ -362,7 +362,7 @@
                       "id":  "papa3",
                       "nombre":  "Papas con Cheddar y Bacon",
                       "descripcion":  "Papas fritas con queso cheddar y trozos de bacon",
-                      "precio":  12500,
+                      "precio":  15000,
                       "emoji":  "🍟",
                       "imagen":  "../files/papas_con_cheddar.png"
                   }
