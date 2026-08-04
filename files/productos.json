@@ -780,7 +780,7 @@
                        "id":  "promo-lomos-completos-papas-gaseosa",
                        "nombre":  "2 Lomos Completos con Papas + 2 Gaseosas 500ml",
                        "descripcion":  "Promo del dia: 2 lomos completos con papas y 2 gaseosas de 500ml.",
-                       "precio":  37000,
+                       "precio":  40000,
                        "emoji":  "🎉",
                        "imagen":  "../files/2_lomos_mas_2_gaseosas.jpeg",
                        "visible":  true
@@ -807,7 +807,7 @@
                        "id":  "promo-2-lomos-completos-papas",
                        "nombre":  "2 Lomos Completos con Papas",
                        "descripcion":  "Promo del dia: 2 lomos completos con papas.",
-                       "precio":  32000,
+                       "precio":  35000,
                        "emoji":  "🎉",
                        "imagen":  "../files/2_lomos_completos.jpeg",
                        "visible":  true
