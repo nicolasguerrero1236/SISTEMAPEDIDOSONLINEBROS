@@ -178,28 +178,28 @@
                       "id":  "lomo1",
                       "nombre":  "Lomo Completo",
                       "descripcion":  "PAN DE LOMO DE 20CM, MAYONESA CASERA, BIFE DE LOMO DE 120GS, LECHUGA, TOMATE, JAMON, QUESO, HUEVO Y PAPAS FRITAS",
-                      "precio":  17000,
+                      "precio":  20000,
                       "emoji":  "🥪"
                   },
                   {
                       "id":  "lomo2",
                       "nombre":  "Lomo Americano",
                       "descripcion":  "PAN DE LOMO DE 20CM, BIFE DE LOMO DE 120GS,  MAYONESA CASERA, CEBOLLA CARAMELIZADA, QUESO CHEDDAR, BACON, SALSA BBQ, HUEVO Y PAPAS FRITAS",
-                      "precio":  19000,
+                      "precio":  22000,
                       "emoji":  "🥪"
                   },
                   {
                       "id":  "lomo3",
                       "nombre":  "Lomo Azul",
                       "descripcion":  "PAN DE LOMO DE 20CM, BIFE DE LOMO DE 120GS, MAYONESA CASERA, LECHUGA, TOMATE, QUESO TYBO, QUESO AZUL, HUEVO, JAMON Y PAPAS FRITAS",
-                      "precio":  19000,
+                      "precio":  22000,
                       "emoji":  "🥪"
                   },
                   {
                       "id":  "lomo4",
                       "nombre":  "Lomo Mex",
                       "descripcion":  "PAN DE LOMO DE 20CM, MAYONESA CASERA, BIFE DE LOMO DE 120GS, PIMIENTOS SALTEADOS ( ROJO, VERDE, AMARILLO), SALSA PICANTE, CEBOLLA SALTEADA Y PAPAS FRITAS",
-                      "precio":  19000,
+                      "precio":  22000,
                       "emoji":  "🥪"
                   },
                   {
@@ -213,7 +213,7 @@
                       "id":  "bife-extra",
                       "nombre":  "Bife Extra",
                       "descripcion":  "Bife de lomo adicional de 120gs",
-                      "precio":  4000,
+                      "precio":  5000,
                       "emoji":  "🥩"
                   }
               ],
