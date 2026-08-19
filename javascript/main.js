@@ -48,7 +48,7 @@ async function cargarProductos() {
 
 function obtenerCostoDelivery() {
     const costo = Number(CONFIG.COSTO_DELIVERY);
-    return Number.isFinite(costo) ? costo : 1000;
+    return Number.isFinite(costo) ? costo : 2000;
 }
 
 function cargarSweetAlert() {
